@@ -1,0 +1,187 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0;}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  width: 200px;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  padding-inline: 14px;
+  background: white;
+  max-width: 1000px;
+
+  div > p {
+    color: black;
+  }
+}
+
+
+.seminar-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.seminar-info > button {
+  margin-top: 20px;
+}
+
+.seminar-photo > img {
+  width: 360px;
+  border-radius: 15px;
+}
+
+.seminar-modal {
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Находиться поверх других элементов */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включить прокрутку, если нужно */
+  background-color: rgba(0,0,0,0.4); /* Черный с прозрачностью */
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% от верха и по центру */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Ширина содержимого */
+  max-width: 500px; /* Максимальная ширина */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content img {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 2%;
+  top: 4%;
+  cursor: pointer;
+}
+
+.modal-content > p, .modal-content > h2 {
+  color: black;
+}
+
+.seminar-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.seminar-edit-block > label {
+  color: black;
+}
+
+.seminar-edit-block {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+form > button {
+  align-self: center;
+  margin-top: 10px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px 14px;
+  border-radius: 20px;
+}
+
+input::placeholder {
+  color: white;
+}
